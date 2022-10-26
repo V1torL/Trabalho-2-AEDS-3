@@ -6,8 +6,9 @@ struct grafo {
 };
 typedef struct grafo Grafo;
 
-int* criarPovos(FILE **arquivo,int p);
+int** criarPovos(FILE **arquivo,int p);
+void destroiPovos(int **povos, int p);
 void iniciaGrafo(Grafo* g, int vertice);
 void destroiGrafo(Grafo *g);
-void adicionaAresta(Grafo *g, int i, int j, int distancia);
-void criaGrafo(FILE **arquivo, Grafo *g, int p, int c);
+void adicionarAresta(Grafo *g, int i, int j, int distancia);
+void criarGrafo(FILE **arquivoE, FILE **arquivoS,Grafo *g, int p, int c);
