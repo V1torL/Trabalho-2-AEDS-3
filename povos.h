@@ -1,14 +1,13 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-struct grafo {
-    int vertice;
-    int **matriz;
-};
-typedef struct grafo Grafo;
-
-int** criarPovos(FILE **arquivo,int p);
+int** criarPovos(int p);
 void destroiPovos(int **povos, int p);
-void iniciaGrafo(Grafo* g, int vertice);
-void destroiGrafo(Grafo *g);
-void adicionarAresta(Grafo *g, int i, int j, int distancia);
-void criarGrafo(FILE **arquivoE, FILE **arquivoS,Grafo *g, int p, int c);
+void inserePovos(FILE **arquivo, int **povos, int p);
+//void imprimirPovos(FILE **arquivo,int **povos, int p);
+int** iniciaGrafo(int p);
+void destroiGrafo(int **matriz, int p);
+void adicionarAresta(int **matriz, int i, int j, int distancia);
+void criarGrafo(FILE **arquivo, int **matriz, int p, int c);
+//void imprimirGrafo(FILE **arquivo,int **matriz, int p);
+void heuristica(FILE **arquivo,int **povos, int p, int w);
