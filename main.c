@@ -19,7 +19,7 @@ int main(int argc,char *argv[]){
         inserePovos(&arquivoE,povos,p);
         matriz = iniciaGrafo(p);
         criarGrafo(&arquivoE,matriz,p,c);
-        heuristica(&arquivoS,povos,p,w);
+        heuristica(&arquivoS,povos,matriz,p,d,w);
         //imprimirPovos(&arquivoS,povos,p);
         //imprimirGrafo(&arquivoS,matriz,p);
         destroiPovos(povos, p);
